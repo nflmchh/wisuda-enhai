@@ -55,8 +55,10 @@
         </form>
     </div>
 
-    <p class="text-center text-blue-300 text-xs mt-6">
-        Absensi Wisuda Hybrid &copy; {{ date('Y') }}
+    <p class="text-center text-blue-200 text-xs mt-6">
+        &copy; {{ date('Y') }} <a href="https://suddenlycreativestudio.com/" target="_blank" rel="noopener"
+            class="text-amber-300 hover:text-amber-200 transition-colors font-medium">Suddenly Creative</a>
+        &mdash; Virtual Invitation
     </p>
 </div>
 
