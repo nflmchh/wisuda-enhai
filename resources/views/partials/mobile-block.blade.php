@@ -2,18 +2,23 @@
 #mobile-block {
     display: none;
     position: fixed;
-    inset: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 100dvh;
     z-index: 99999;
     overflow: hidden;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 3.5rem 2rem 2rem;
+    padding: env(safe-area-inset-top, 3.5rem) 2rem env(safe-area-inset-bottom, 2rem);
+    padding-top: max(3.5rem, env(safe-area-inset-top));
+    padding-bottom: max(2rem, env(safe-area-inset-bottom));
     text-align: center;
 }
 
 @media (max-width: 767px) {
     #mobile-block { display: flex; }
+    html, body { background: #0d1f1a !important; }
 }
 
 .mb-bg {
@@ -183,3 +188,16 @@
         &mdash; Virtual Invitation
     </footer>
 </div>
+<script>
+if (window.innerWidth < 768) {
+    document.documentElement.style.background = '#0d1f1a';
+    document.body.style.background = '#0d1f1a';
+    document.body.style.overflow = 'hidden';
+}
+window.addEventListener('resize', function() {
+    var dark = window.innerWidth < 768;
+    document.documentElement.style.background = dark ? '#0d1f1a' : '';
+    document.body.style.background = dark ? '#0d1f1a' : '';
+    document.body.style.overflow = dark ? 'hidden' : '';
+});
+</script>
