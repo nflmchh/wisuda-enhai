@@ -160,6 +160,8 @@
 </head>
 <body>
 
+@include('partials.mobile-block')
+
 {{-- Gate Setup Overlay (shown on first load) --}}
 <div id="gate-setup">
     <div class="setup-box">

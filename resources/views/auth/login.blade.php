@@ -25,6 +25,7 @@
     </style>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-blue-950 to-blue-800 flex items-center justify-center p-4">
+@include('partials.mobile-block')
 
 <div class="w-full max-w-md">
     <div class="text-center mb-8">
