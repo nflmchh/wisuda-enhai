@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login — Absensi Wisuda Hybrid</title>
     @vite(['resources/css/app.css'])
+    <style>
+        @keyframes colorPulse {
+            0%   { color: #fcd34d; text-shadow: 0 0 8px rgba(252,211,77,0.6); }
+            25%  { color: #86efac; text-shadow: 0 0 8px rgba(134,239,172,0.6); }
+            50%  { color: #f9a8d4; text-shadow: 0 0 8px rgba(249,168,212,0.6); }
+            75%  { color: #67e8f9; text-shadow: 0 0 8px rgba(103,232,249,0.6); }
+            100% { color: #fcd34d; text-shadow: 0 0 8px rgba(252,211,77,0.6); }
+        }
+        .link-rainbow {
+            animation: colorPulse 4s ease-in-out infinite;
+            font-weight: 600;
+        }
+        .link-rainbow:hover {
+            animation-play-state: paused;
+            color: #fff;
+            text-shadow: 0 0 12px rgba(255,255,255,0.8);
+        }
+    </style>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-blue-950 to-blue-800 flex items-center justify-center p-4">
 
@@ -57,7 +75,7 @@
 
     <p class="text-center text-blue-200 text-xs mt-6">
         &copy; {{ date('Y') }} <a href="https://suddenlycreativestudio.com/" target="_blank" rel="noopener"
-            class="text-amber-300 hover:text-amber-200 transition-colors font-medium">Suddenly Creative</a>
+            class="link-rainbow">Suddenly Creative</a>
         &mdash; Virtual Invitation
     </p>
 </div>
